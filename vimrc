@@ -27,13 +27,15 @@ syntax on
 " Change shell
 set shell=bash                  " Vim expects a POSIX-compliant shell, which Fish (my default shell) is not
 
+set cursorline
+
 " Change the mapleader from \ to ,
 let mapleader=","
 let maplocalleader="\\"
 
 " Editing behaviour {{{
 set showmode                    " always show what mode we're currently editing in
-set nowrap                      " don't wrap lines
+" set nowrap                      " don't wrap lines
 set tabstop=4                   " a tab is four spaces
 set softtabstop=4               " when hitting <BS>, pretend like a tab is removed, even if spaces
 set expandtab                   " expand tabs by default (overloadable per file type later)
@@ -50,7 +52,7 @@ set smartcase                   " ignore case if search pattern is all lowercase
 set smarttab                    " insert tabs on the start of a line according to
                                 "    shiftwidth, not tabstop
 set scrolloff=4                 " keep 4 lines off the edges of the screen when scrolling
-set virtualedit=all             " allow the cursor to go in to "invalid" places
+" set virtualedit=all             " allow the cursor to go in to "invalid" places
 set hlsearch                    " highlight search terms
 set incsearch                   " show search matches as you type
 set gdefault                    " search/replace "globally" (on a line) by default

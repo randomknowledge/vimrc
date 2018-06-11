@@ -676,7 +676,8 @@ else
 endif
 
 "colorscheme onedark
-colorscheme OceanicNext
+"colorscheme OceanicNext
+colorscheme monokai
 
 " Pulse ------------------------------------------------------------------- {{{
 

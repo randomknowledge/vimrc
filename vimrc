@@ -174,7 +174,7 @@ set showcmd                     " show (partial) command in the last line of the
                                 "    this also shows visual selection info
 set nomodeline                  " disable mode lines (security measure)
 "set ttyfast                     " always use a fast terminal
-set nocursorline                " don't highlight the current line (useful for quick orientation, but also slow to redraw)
+"set nocursorline                " don't highlight the current line (useful for quick orientation, but also slow to redraw)
 " }}}
 
 nnoremap <leader>, :set cursorline!<cr>  " toggle highlighting the cursor line

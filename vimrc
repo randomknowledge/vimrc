@@ -102,7 +102,7 @@ nnoremap <C-y> 2<C-y>
 " Folding rules {{{
 set foldenable                  " enable folding
 set foldcolumn=2                " add a fold column
-set foldmethod=marker           " detect triple-{ style fold markers
+set foldmethod=indent           " detect triple-{ style fold markers
 set foldlevelstart=99           " start out with everything unfolded
 set foldopen=block,hor,insert,jump,mark,percent,quickfix,search,tag,undo
                                 " which commands trigger auto-unfold
@@ -229,8 +229,8 @@ endif
 " Since I never use the ; key anyway, this is a real optimization for almost
 " all Vim commands, as I don't have to press the Shift key to form chords to
 " enter ex mode.
-nnoremap ; :
-nnoremap <leader>; ;
+" nnoremap ; :
+" nnoremap <leader>; ;
 
 " Avoid accidental hits of <F1> while aiming for <Esc>
 noremap! <F1> <Esc>
@@ -251,7 +251,7 @@ vnoremap <leader>s !sort -f<CR>gv
 nnoremap <leader>s vip!sort -f<CR><Esc>
 
 " make p in Visual mode replace the selected text with the yank register
-vnoremap p <Esc>:let current_reg = @"<CR>gvdi<C-R>=current_reg<CR><Esc>
+" vnoremap p <Esc>:let current_reg = @"<CR>gvdi<C-R>=current_reg<CR><Esc>
 
 " Shortcut to make
 nnoremap mk :make<CR>
@@ -273,10 +273,10 @@ nnoremap j gj
 nnoremap k gk
 
 " Easy window navigation
-noremap <C-h> <C-w>h
-noremap <C-j> <C-w>j
-noremap <C-k> <C-w>k
-noremap <C-l> <C-w>l
+" noremap <C-h> <C-w>h
+" noremap <C-j> <C-w>j
+" noremap <C-k> <C-w>k
+" noremap <C-l> <C-w>l
 " nnoremap <leader>w <C-w>v<C-w>l
 
 " Complete whole filenames/lines with a quicker shortcut key in insert mode
@@ -314,7 +314,7 @@ nnoremap N N:call PulseCursorLine()<cr>
 
 " Quickly get out of insert mode without your fingers having to leave the
 " home row (either use 'jj' or 'jk')
-inoremap jj <Esc>
+" inoremap jj <Esc>
 
 " Quick alignment of text
 " nnoremap <leader>al :left<CR>
@@ -337,7 +337,7 @@ cnoremap w!! w !sudo tee % >/dev/null
 "
 " In those buffers, but this is super laborious.  This just plugs that
 " under my existing "refresh the screen" shortcut <c-w>.
-nnoremap <C-w> :filetype detect<cr>:redraw!<cr>
+" nnoremap <C-w> :filetype detect<cr>:redraw!<cr>
 
 " Jump to matching pairs easily, with Tab
 nnoremap <Tab> %
@@ -786,8 +786,8 @@ vnoremap <leader>" <esc>a"<esc>gvo<esc>i"<esc>gvo<esc>ll
 vnoremap <leader>' <esc>a'<esc>gvo<esc>i'<esc>gvo<esc>ll
 
 " Use shift-H and shift-L for move to beginning/end
-nnoremap H 0
-nnoremap L $
+" nnoremap H 0
+" nnoremap L $
 
 " Define operator-pending mappings to quickly apply commands to function names
 " and/or parameter lists in the current line

@@ -916,3 +916,12 @@ xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
 
 " }}}
+
+" ctags settings
+:set tags=~/vimrc/tags
+
+" Open the definition in a new tab
+map <A-d> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
+
+" Open the definition in a vertical split
+map <C-d> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
